@@ -33,3 +33,4 @@
   - name: Install Golang Tools
     ansible.builtin.shell: |
 	go install github.com/spf13/cobra-cli@latest
+	curl -sSf https://atlasgo.sh | sh
