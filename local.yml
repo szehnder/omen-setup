@@ -17,3 +17,4 @@
     - nodejs
     - nsis
     - webkit2gtk3
+    - webkit2gtk3-devel
