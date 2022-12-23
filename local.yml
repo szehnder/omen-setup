@@ -2,22 +2,18 @@
   become: true
   tasks:
   - name: Install Dev Tools
-    apt: name={{item}
+    dnf: 
+      name: '{{item}}'
     with_items:
-			- htop
-			- git
-			- jq
-			- zsh
-			- fonts-powerline
-			- direnv
-			- gnome-tweaks
-			- golang
-			- bison
-			- ca-certificates
-			- curl
-			- gnupg
-			- lsb-release
-			- apt-transport-https
-			- software-properties-common
-			- nodejs
-			- pip
+    - htop
+    - git
+    - pip
+    - jq
+    - zsh
+    - powerline
+    - golang
+    - bison
+    - gtk3-devel
+    - nodejs
+    - nsis
+    - webkit2gtk3
