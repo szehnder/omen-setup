@@ -86,6 +86,9 @@ npm install -g @go-task/cli
 go get -u github.com/spf13/cobra@latest
 go install github.com/spf13/cobra-cli@latest
 
+#install localstack
+sudo dnf install pip
+python3 -m pip install localstack
 
 #manual tasks
 #- logging in to 1password

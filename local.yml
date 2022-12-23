@@ -4,33 +4,34 @@
   - name: Install Dev Tools
     apt: name={{item}
     with_items:
-        - htop
-        - git
-	- jq
-	- zsh
-	- fonts-powerline
-	- direnv
-	- gnome-tweaks
-	- golang
-	- bison
-	- ca-certificates
-	- curl
-	- gnupg
-	- lsb-release
-	- apt-transport-https
-	- software-properties-common
-	- nodejs
+		- htop
+		- git
+		- jq
+		- zsh
+		- fonts-powerline
+		- direnv
+		- gnome-tweaks
+		- golang
+		- bison
+		- ca-certificates
+		- curl
+		- gnupg
+		- lsb-release
+		- apt-transport-https
+		- software-properties-common
+		- nodejs
+		- pip
   - name: Install Gaming Stuff
     apt: name={{item}}
     with_items:
-	- libgtk-3-dev
-	- libwebkit2gtk-4.0-dev
-	- libvulkan1
-	- mesa-vulkan-drivers vulkan-utils
-	- lutris
+		- libgtk-3-dev
+		- libwebkit2gtk-4.0-dev
+		- libvulkan1
+		- mesa-vulkan-drivers vulkan-utils
+		- lutris
   - name: Install Grafana
     apt: name=grafana
   - name: Install Golang Tools
     ansible.builtin.shell: |
-	go install github.com/spf13/cobra-cli@latest
-	curl -sSf https://atlasgo.sh | sh
+			go install github.com/spf13/cobra-cli@latest
+			curl -sSf https://atlasgo.sh | sh
