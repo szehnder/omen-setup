@@ -1,0 +1,14 @@
+- name: Install Gaming Stuff
+    apt: name={{item}}
+    with_items:
+		- libgtk-3-dev
+		- libwebkit2gtk-4.0-dev
+		- libvulkan1
+		- mesa-vulkan-drivers vulkan-utils
+		- lutris
+  - name: Install Grafana
+    apt: name=grafana
+  - name: Install Golang Tools
+    ansible.builtin.shell: |
+			go install github.com/spf13/cobra-cli@latest
+			curl -sSf https://atlasgo.sh | sh
